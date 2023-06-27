@@ -1,0 +1,11 @@
+
+[theme]
+base="light"
+primaryColor="#14266A"
+secondaryBackgroundColor="#66A6C9"
+
+[server]
+port = 8501
+
+[browser]
+gatherUsageStats = false
