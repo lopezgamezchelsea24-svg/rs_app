@@ -27,7 +27,7 @@ st.sidebar.title("SUPRAM")
 st.image(Image.open(os.path.join(path, "img", "logos.png")), width=500)
 
 st.markdown("""
-## Acerca de
+## Introducción
 
 Plataforma para la consulta y visualización del datos climatológicos, hidrológicos, suelo y vegetación
 derivados de Percepción Remota y Modelos Globales para los acuíferos de México.
@@ -83,7 +83,11 @@ las alumnas que han colaborado en este proyecto de investigación/divulgación.
 
 - **Alumn@s:**
 
+**Ing. Luis Antonio Rodríguez Nava** | Geológo | Facultad de Ingeniería de la UNAM
+
 **Ing. Maria Isabel Celso Crescencio** | Geofísica | Facultad de Ingeniería de la UNAM
+
+**Ing. Clara Elena Tello Soto** | Geológa | Facultad de Ingeniería de la UNAM
 
 **Ing. Diana Cecilia Morales Padilla** | Geológa | Facultad de Ingeniería de la UNAM
 
