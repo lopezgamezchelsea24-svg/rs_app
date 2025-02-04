@@ -77,7 +77,7 @@ def create_map(dataset, land_cover):
             opacity=0.6,
             center={"lat": 23, "lon": -102},
             color_continuous_scale="icefire",
-            mapbox_style="carto-positron",
+            map_style="carto-positron",
             zoom=3.5
         )
     
