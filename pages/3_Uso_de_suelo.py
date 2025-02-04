@@ -65,7 +65,7 @@ def create_map(dataset, land_cover):
     else:    
         data_table["Uso Suelo (%)"] = aquifer_lc
            
-    fig = px.choropleth_mapbox(
+    fig = px.choropleth_map(
             data_table,
             geojson=layer,
             color="Uso Suelo (%)",

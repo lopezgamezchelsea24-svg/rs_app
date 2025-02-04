@@ -99,7 +99,7 @@ def create_map(varname, dataset):
     data_table = table.set_index("id", drop=False)
     data_table[var_label] = serie.round(2)
            
-    fig = px.choropleth_mapbox(
+    fig = px.choropleth_map(
             data_table,
             geojson=layer,
             color=var_label,
