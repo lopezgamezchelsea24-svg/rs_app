@@ -16,7 +16,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from streamlit_plotly_events import plotly_events
 
 
 path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -220,10 +219,11 @@ dataset_selection = st.sidebar.multiselect(
 
 st.markdown(f"**Mapa de {variable_selection} media anual con la base de datos {map_dataset_selection}**")
 fig = create_map(variable_selection, map_dataset_selection)
-selected_geometry = plotly_events(fig, click_event=True, hover_event=False)
+selected_geometry = st.plotly_chart(fig, use_container_width=True, on_select="rerun")
 
-if selected_geometry and dataset_selection:
-    idx = selected_geometry[0]["pointIndex"]
+if selected_geometry["selection"]["points"] and dataset_selection:
+    idx = selected_geometry["selection"]["points"][0]["properties"]["id"]
+    table = table.copy().set_index("id", drop=False)
     if idx in table.index: 
         aquifer_data = table.loc[idx, :].squeeze()
         id_aquifer, aquifer_name = aquifer_data["id"], aquifer_data["name"]
